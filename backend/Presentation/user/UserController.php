@@ -8,10 +8,11 @@ require_once __DIR__ . '/../../Infrastructure/DbalUser.php';
 require_once __DIR__ . '/../../CustomExceptions/UserRegistrationCustomException.php';
 
 use CustomExceptions\UserRegistrationCustomException;
+use Database;
 use Domain\Personeel;
 use Infrastructure\DbalUser;
 
-class UserController extends \Database
+class UserController extends Database
 {
     public function register(Personeel $user)
     {
