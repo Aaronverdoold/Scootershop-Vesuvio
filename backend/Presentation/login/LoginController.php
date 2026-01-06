@@ -26,6 +26,11 @@ class LoginController extends Database
 
         $role = $result['role'];
 
+        session_start();
+        session_regenerate_id(true);
+        $_SESSION['username'] = $result['username'];
+        $_SESSION['role'] = $role;
+
         switch ($role) {
             case 'management':
                 header('Location: ../../../frontend/dashboard/dashboard.html');

@@ -1,6 +1,6 @@
 <?php
 
-namespace Presentation\user;
+namespace Presentation\register;
 
 require_once __DIR__ . '/../../Database/dbconnect.php';
 require_once __DIR__ . '/../../Domain/Personeel.php';
@@ -12,7 +12,7 @@ use Database;
 use Domain\Personeel;
 use Infrastructure\DbalUser;
 
-class UserController extends Database
+class RegisterController extends Database
 {
     public function register(Personeel $user)
     {

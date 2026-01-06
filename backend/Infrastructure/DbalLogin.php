@@ -26,11 +26,11 @@ class DbalLogin
             $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
             if (!$row) {
-                return false;
+                return null;
             }
 
             if (!isset($user->password) || !password_verify($user->password, $row['password'])) {
-                return false;
+                return null;
             }
 
             return [

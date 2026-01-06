@@ -32,7 +32,7 @@ class DbalUser
             ]);
 
             if (!$insert) {
-                return false;
+                return null;
             }
 
             return true;

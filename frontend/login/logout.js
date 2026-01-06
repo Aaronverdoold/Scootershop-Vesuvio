@@ -1,6 +1,6 @@
 document.getElementById('logout')?.addEventListener('click', async () => {
     try {
-        const res = await fetch('../../backend/Domain/login/Logout.php', { method: 'POST' });
+        const res = await fetch('../../backend/Domain/login/Logout.php', { method: 'POST', credentials: 'include' });
         if (res.ok)
             location.href = '../login/login.html';
         else
