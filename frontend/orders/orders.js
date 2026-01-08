@@ -28,7 +28,6 @@
 
         statusEl.textContent = '';
 
-        // build table
         const table = document.createElement('table');
         const thead = document.createElement('thead');
         thead.innerHTML = '<tr>' +
